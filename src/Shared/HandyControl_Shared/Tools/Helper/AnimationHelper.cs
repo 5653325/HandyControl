@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -60,7 +61,7 @@ namespace HandyControl.Tools
                 var n = arr[i];
                 if (!double.IsNaN(n))
                 {
-                    builder.Append(n).Append(s);
+                    builder.Append(n.ToString(CultureInfo.InvariantCulture)).Append(s);
                 }
             }
 
